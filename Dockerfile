@@ -16,11 +16,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application code
 COPY . .
 
-# Run document ingestion at build time
-RUN python -m app.ingest
-
 # Expose port (Render sets PORT env var)
 EXPOSE 8000
 
-# Start the server using the PORT environment variable
-CMD ["sh", "-c", "uvicorn app.server:app --host 0.0.0.0 --port ${PORT:-8000}"]
+# Run ingestion at startup (needs OPENAI_API_KEY), then start server
+CMD ["sh", "-c", "python -m app.ingest && uvicorn app.server:app --host 0.0.0.0 --port ${PORT:-8000}"]
