@@ -1,6 +1,6 @@
 const API_URL = import.meta.env.VITE_API_URL || '';
 
-const TIMEOUT_MS = 30000; // 30 seconds
+const TIMEOUT_MS = 120000; // 120 seconds (accounts for cold start on free tier)
 
 export interface ChatResponse {
   output: string;
