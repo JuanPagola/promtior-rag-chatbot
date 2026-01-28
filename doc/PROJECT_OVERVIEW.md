@@ -32,7 +32,7 @@ FastAPI server with:
 - CORS middleware for cross-origin requests
 - LangServe routes at `/promtior` for the RAG chain
 - Built-in playground at `/promtior/playground`
-- Health check endpoint at `/health` for Railway
+- Health check endpoint at `/health` for monitoring
 
 #### 5. Frontend Application (`frontend/`)
 Modern React 19 frontend with:
@@ -52,7 +52,7 @@ Modern React 19 frontend with:
 | Embeddings | text-embedding-3-small | Latest OpenAI embedding model, cost-effective |
 | Vector Store | FAISS | Fast, local, no external dependencies |
 | Server | FastAPI | Native integration with LangServe |
-| Deployment | Railway | Simple deployment, as suggested in the challenge |
+| Deployment | Render | Docker for backend, Static Site for frontend |
 
 #### Frontend
 
@@ -77,9 +77,9 @@ Modern React 19 frontend with:
 **Solution**: Added `allow_dangerous_deserialization=True` parameter since we control both the creation and loading of the vectorstore.
 
 #### Challenge 3: Environment Variables in Docker
-**Problem**: OpenAI API key must be available during both build (for ingestion) and runtime (for queries).
+**Problem**: OpenAI API key is only available at runtime, not during Docker build.
 
-**Solution**: Railway injects environment variables at build time when using a Dockerfile, so the same `OPENAI_API_KEY` works for both phases.
+**Solution**: Document ingestion runs at container startup (in CMD) instead of build time, ensuring the API key is available from environment variables.
 
 #### Challenge 4: Frontend API Connectivity
 **Problem**: Frontend needs to communicate with backend during development and production.
@@ -117,7 +117,7 @@ promtior-rag-chatbot/
 ├── .gitignore
 ├── requirements.txt
 ├── Dockerfile
-├── railway.toml
+├── render.yaml
 └── README.md
 ```
 
@@ -163,11 +163,20 @@ The chatbot correctly answers the required questions:
 2. **"When was the company founded?"**
    - May 2023
 
+### Implemented Features (Beyond Requirements)
+
+1. **Message Persistence**: Chat history saved to localStorage
+2. **Markdown Rendering**: Assistant responses render markdown formatting
+3. **Copy Message Button**: One-click copy for assistant messages
+4. **Keyboard Shortcuts**: Cmd/Ctrl+Enter to send messages
+5. **Request Timeout**: 120-second timeout with user-friendly errors
+6. **Structured Logging**: Backend logs with timestamps and context
+7. **Global Error Handling**: Graceful error responses from API
+8. **CORS Security**: Configurable allowed origins
+
 ### Future Improvements
 
-1. **Conversation Memory**: Add chat history for multi-turn conversations
-2. **Streaming Responses**: Enable token-by-token streaming for better UX
-3. **Source Citations**: Show which documents were used for each answer
-4. **Multiple Vector Stores**: Support different knowledge bases for different topics
-5. **Dark/Light Mode Toggle**: Allow users to switch themes
-6. **Message Persistence**: Save chat history to localStorage or backend
+1. **Conversation Memory**: Multi-turn conversations with context
+2. **Source Citations**: Show which documents were used for each answer
+3. **Streaming Responses**: Token-by-token streaming for better UX
+4. **Multiple Vector Stores**: Different knowledge bases for different topics

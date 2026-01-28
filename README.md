@@ -9,7 +9,7 @@ A chatbot assistant that uses RAG (Retrieval Augmented Generation) architecture 
 - Built-in playground UI for testing (backend)
 - REST API with LangServe
 - Docker support for easy deployment
-- Ready for Railway deployment
+- Deployed on Render (Docker backend + Static Site frontend)
 
 ## Tech Stack
 
@@ -184,7 +184,6 @@ promtior-rag-chatbot/
 ├── requirements.txt
 ├── Dockerfile
 ├── render.yaml
-├── railway.toml          # (alternative: Railway)
 └── README.md
 ```
 
