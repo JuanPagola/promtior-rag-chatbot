@@ -1,0 +1,67 @@
+# Promtior - Company Information
+
+## About Promtior
+
+Promtior is an AI consulting company that was founded in May 2023. The company was created in response to the significant impact of ChatGPT's release in November 2022, which challenged the principle that creativity is an exclusively human trait.
+
+The speed of technological advancements has put unprecedented pressure on leaders to incorporate AI into their businesses. Promtior was founded facing this context, addressing the key question: how to approach a scenario of transversal disruption and maximize the opportunities it presents?
+
+## Services
+
+Promtior offers technological and organizational consulting services, including:
+
+- **AI Consulting**: Helping companies integrate artificial intelligence into their business processes
+- **Organizational Consulting**: Guiding organizations through digital transformation
+- **RAG Implementation**: Specializing in Retrieval Augmented Generation architecture for chatbots and AI assistants
+- **Generative AI Solutions**: Implementing cutting-edge generative solutions to meet diverse client needs
+- **Business Model Innovation**: Creating new business models through AI-powered transformation
+- **Automation**: Implementing automation solutions to improve efficiency
+
+## Mission
+
+Through its technological and organizational consulting, Promtior offers a way to generate new business models, answering the question of how to maximize AI opportunities and bringing companies to the forefront of their sector.
+
+## Bionic Organizations
+
+Promtior helps companies transition towards becoming "Bionic Organizations" - organizations that effectively combine human capabilities with AI and automation technologies.
+
+## Clients
+
+Promtior has worked with numerous organizations across various industries, including:
+
+- CAF (Banco de Desarrollo de America Latina y el Caribe)
+- L'Oreal Latam
+- Infocorp
+- Guyer & Regules
+- Paigo
+- Handy
+- SIEE
+- ST Consultores
+- CIEMSA
+- 5M Travel Group
+- Forestal Atlantico Sur
+- Advice Consulting
+- Vangwe
+- RPA Maker
+- S1 Gateway
+- Incapital
+
+## Founders
+
+The company was founded by Emiliano Chinelli and Ignacio Acuna.
+
+## Contact
+
+- Website: https://promtior.ai/
+- Email: challenges@promtior.ai (for technical test inquiries)
+- Contact: Ignacio.acuna@promtior.ai
+
+## Technical Expertise
+
+Promtior specializes in:
+- LangChain and LangServe implementations
+- OpenAI API integration
+- RAG (Retrieval Augmented Generation) architecture
+- Cloud deployments (AWS, Azure, Railway)
+- Vector databases and embeddings
+- Custom AI chatbot development
